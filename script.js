@@ -25,3 +25,10 @@ close.addEventListener('click',closedModal);
 // close the modal window when we click outside of the modal
 
 overlay.addEventListener('click',closedModal);
+
+document.addEventListener('keydown',function(e){
+    if(e.key=='Escape'&&(!modal.classList.contains('hidden')))
+    {
+            closedModal();
+    }
+});
